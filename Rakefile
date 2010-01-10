@@ -4,13 +4,14 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "esperanto_mongomapper"
+    gem.name = "esperanto_mongo_mapper"
     gem.summary = %Q{MongoMapper adaptilo por «Esperanto» gemo}
     gem.description = %Q{TODO: longer description of your gem}
     gem.email = "rotuka@rotuka.com"
     gem.homepage = "http://github.com/rotuka/esperanto_mongomapper"
     gem.authors = ["Alexander Semyonov"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_development_dependency 'shoulda', ">= 0"
+    gem.add_dependency 'esperanto'
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
@@ -47,7 +48,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "esperanto_mongomapper #{version}"
+  rdoc.title = "esperanto_mongo_mapper #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
